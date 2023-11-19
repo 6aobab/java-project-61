@@ -13,7 +13,7 @@ public class Progression {
         int count = 3;
         do {
             int startNum = getRandomValue(1, 10);
-            int endNum = getRandomValue(20, 50);
+            int endNum = getRandomValue(20, 90);
             int step = getRandomValue(2, 4);
             int foundNum = printAP(startNum, endNum, step);
             System.out.print("\nYour answer: ");
