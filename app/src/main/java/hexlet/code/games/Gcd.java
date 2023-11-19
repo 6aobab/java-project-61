@@ -14,7 +14,13 @@ public class Gcd {
         do {
             int found = 100;
             int firstNum = (int) (Math.random() * found);
+            if (firstNum == 0) {
+                firstNum = firstNum + 1;
+            }
             int secondNum = (int) (Math.random() * found);
+            if (secondNum == 0) {
+                secondNum = secondNum + 1;
+            }
             System.out.println("Question: " + firstNum + " " + secondNum);
             int result = gcd(firstNum, secondNum);
             System.out.print("Your answer: ");
@@ -34,12 +40,6 @@ public class Gcd {
     }
 
     public static int gcd(int a, int b) {
-        if (a == 0) {
-            a += 1;
-        }
-        if (b == 0) {
-            b += 1;
-        }
         a = Math.abs(a);
         b = Math.abs(b);
         if (b > a) {
