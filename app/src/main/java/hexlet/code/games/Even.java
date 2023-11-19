@@ -23,11 +23,11 @@ public class Even {
                 System.out.println("Correct!");
                 count--;
             } else if (incomingAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again "
+                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, "
                         + incomingName + "!");
                 break;
             } else if (incomingAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again "
+                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
                         + incomingName + "!");
                 break;
             } else {

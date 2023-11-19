@@ -30,7 +30,7 @@ public class Calculator {
                 count--;
             } else {
                 System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
-                        + "'\nLet's try again " + incomingName);
+                        + "'\nLet's try again, " + incomingName);
                 break;
             }
             if (count == 0) {

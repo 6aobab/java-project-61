@@ -24,7 +24,7 @@ public class Gcd {
                 count--;
             } else {
                 System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
-                        + "'\nLet's try again " + incomingName);
+                        + "'\nLet's try again, " + incomingName);
                 break;
             }
             if (count == 0) {
