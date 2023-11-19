@@ -11,18 +11,18 @@ public class Progression {
         String incomingName = Engine.scanName(scanner, 5, "What number is missing in the progression?");
         int count = 3;
         do {
-            int startNum = getRandomValue(1,10);
-            int endNum = getRandomValue(20,99);
-            int step = getRandomValue(2,4);
-            int foundNum = printAP(startNum,endNum,step);
+            int startNum = getRandomValue(1, 10);
+            int endNum = getRandomValue(20, 99);
+            int step = getRandomValue(2, 4);
+            int foundNum = printAP(startNum, endNum, step);
             System.out.println("\nYour answer: ");
             int incomingProgression = scanner.nextInt();
             if (incomingProgression == foundNum) {
                 System.out.println("Correct!");
                 count--;
             } else {
-                System.out.println("'" + incomingProgression + "' is wrong answer ;(. Correct answer was '" + foundNum +
-                        "'\nLet's try again " + incomingName);
+                System.out.println("'" + incomingProgression + "' is wrong answer ;(. Correct answer was '" + foundNum
+                        + "'\nLet's try again " + incomingName);
                 break;
             }
             if (count == 0) {

@@ -28,6 +28,7 @@ public class Menu {
             case "4" -> Gcd.findGreatest();
             case "5" -> Progression.doProgression();
             case "6" -> Prime.primeProcess();
+            default -> System.out.println("Enter the game number next time");
         }
     }
 }
