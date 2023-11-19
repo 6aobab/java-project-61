@@ -13,10 +13,10 @@ public class Progression {
         int count = 3;
         do {
             int startNum = getRandomValue(1, 10);
-            int endNum = getRandomValue(20, 99);
-            int step = 2;
+            int endNum = getRandomValue(20, 50);
+            int step = getRandomValue(2, 4);
             int foundNum = printAP(startNum, endNum, step);
-            System.out.println("\nYour answer: ");
+            System.out.print("\nYour answer: ");
             int incomingProgression = scanner.nextInt();
             if (incomingProgression == foundNum) {
                 System.out.println("Correct!");
