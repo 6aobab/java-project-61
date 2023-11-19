@@ -12,7 +12,9 @@ public class Progression {
                 + "progression?");
         int countToWin = 3;
         do {
-            int startNumOfProgression = getRandomValue(1, 10);
+            int minStartNumOfProgression = 1;
+            int maxStartNimOfProgression = 10;
+            int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
             int endNumOfProgression = getRandomValue(20, 90);
             int stepOfProgression = getRandomValue(2, 4);
             int foundNum = printAP(startNumOfProgression, endNumOfProgression, stepOfProgression);
