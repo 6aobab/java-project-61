@@ -8,7 +8,7 @@ public class Even {
     public static void checkEven() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 2, "Answer 'yes' if number even otherwise "
-                + "answer 'no'");
+                + "answer 'no'.");
         int count = 3;
         do {
             int factor = 100;
@@ -23,11 +23,11 @@ public class Even {
                 System.out.println("Correct!");
                 count--;
             } else if (incomingAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again "
+                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again "
                         + incomingName + "!");
                 break;
             } else if (incomingAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again "
+                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again "
                         + incomingName + "!");
                 break;
             } else {
