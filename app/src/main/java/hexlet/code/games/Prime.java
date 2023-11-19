@@ -6,25 +6,24 @@ import java.util.Scanner;
 
 public class Prime {
 
-    private static final int fountForRandomNumber = 100;
+    private static final int FACTOR_FOR_NUMBER = 100;
 
     public static void primeProcess() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
-        int countToWin = 3;
         do {
 
-            int randomNumber = (int) (Math.random() * fountForRandomNumber);
+            int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             String incomingAnswer = scanner.next();
             if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {
                 System.out.println("Correct!");
-                countToWin--;
+                Engine.COUNT--;
             } else if (!isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("Correct!");
-                countToWin--;
+                Engine.COUNT--;
             } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
                         + incomingName + "!");
@@ -34,10 +33,10 @@ public class Prime {
                         + incomingName + "!");
                 break;
             }
-            if (countToWin == 0) {
+            if (Engine.COUNT == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (countToWin > 0);
+        } while (Engine.COUNT > 0);
     }
 
     public static boolean isSimple(Integer number) {

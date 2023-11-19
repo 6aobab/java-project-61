@@ -6,17 +6,18 @@ import java.util.Scanner;
 
 
 public class Progression {
+    private static final int minStartNumOfProgression = 1;
+    private static final int maxStartNimOfProgression = 10;
+    private static final int minEndNumOfProgression = 20;
+    private static final int maxEndNumOfProgression = 90;
+    private static final int minStepOfProgression = 2;
+    private static final int maxStepOfProgression = 4;
+
     public static void doProgression() {
         Scanner scanner = new Scanner(System.in);
-        int minStartNumOfProgression = 1;
-        int maxStartNimOfProgression = 10;
-        int minEndNumOfProgression = 20;
-        int maxEndNumOfProgression = 90;
-        int minStepOfProgression = 2;
-        int maxStepOfProgression = 4;
+        
         String incomingName = Engine.scanName(scanner, 5, "What number is missing in the "
                 + "progression?");
-        int countToWin = 3;
         do {
             int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
             int endNumOfProgression = getRandomValue(minEndNumOfProgression, maxEndNumOfProgression);
@@ -26,16 +27,16 @@ public class Progression {
             int incomingProgression = scanner.nextInt();
             if (incomingProgression == foundNum) {
                 System.out.println("Correct!");
-                countToWin--;
+                Engine.COUNT--;
             } else {
                 System.out.println("'" + incomingProgression + "' is wrong answer ;(. Correct answer was '" + foundNum
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (countToWin == 0) {
+            if (Engine.COUNT == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (countToWin > 0);
+        } while (Engine.COUNT > 0);
     }
 
     public static int printAP(int start, int end, int step) {

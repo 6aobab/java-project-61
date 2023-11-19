@@ -6,17 +6,17 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
-    private static final int gameNum = 3;
-    private static final int numberOfOperations = 3;
-    private static int randomOperator;
-    private static final int factorForRandomNumber = 100;
+    private static final int numGame = 3;
+    private static final int NUM_OF_OPERATIONS = 3;
+    private static int RANDOM_OPERATOR;
+    private static final int FACTOR_FOR_NUMBER = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner,  gameNum, "What is the result of the expression?");
+        String incomingName = Engine.scanName(scanner,  numGame, "What is the result of the expression?");
 
         do {
-            int firstRandomNumber = (int) (Math.random() * factorForRandomNumber);
-            int secondRandomNumber = (int) (Math.random() * factorForRandomNumber);
+            int firstRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            int secondRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
             String sign = generateOperator();
             System.out.println("Question: " + firstRandomNumber + " " + sign + " " + secondRandomNumber);
             int result = switch (sign) {
@@ -30,22 +30,22 @@ public class Calculator {
             int incomingNumber = scanner.nextInt();
             if (incomingNumber == result) {
                 System.out.println("Correct!");
-                Engine.COUNT_TO_WIN--;
+                Engine.COUNT--;
             } else {
                 System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (Engine.COUNT_TO_WIN == 0) {
+            if (Engine.COUNT == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT_TO_WIN > 0);
+        } while (Engine.COUNT> 0);
     }
 
     public static String generateOperator() {
         Random random = new Random();
         String[] operators = {"+", "-", "*"};
-        randomOperator = random.nextInt(numberOfOperations);
-        return operators[randomOperator];
+        RANDOM_OPERATOR = random.nextInt(NUM_OF_OPERATIONS);
+        return operators[RANDOM_OPERATOR];
     }
 }
