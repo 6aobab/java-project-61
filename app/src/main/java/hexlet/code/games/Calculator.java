@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
-    private static int countToWin = 3;
     private static final int gameNum = 3;
+    private static final int numberOfOperations = 3;
     private static int randomOperator;
     private static final int factorForRandomNumber = 100;
     public static void calculate() {
@@ -30,22 +30,22 @@ public class Calculator {
             int incomingNumber = scanner.nextInt();
             if (incomingNumber == result) {
                 System.out.println("Correct!");
-                countToWin--;
+                Engine.COUNT_TO_WIN--;
             } else {
                 System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (countToWin == 0) {
+            if (Engine.COUNT_TO_WIN == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (countToWin > 0);
+        } while (Engine.COUNT_TO_WIN > 0);
     }
 
     public static String generateOperator() {
         Random random = new Random();
         String[] operators = {"+", "-", "*"};
-        randomOperator = random.nextInt(3);
+        randomOperator = random.nextInt(numberOfOperations);
         return operators[randomOperator];
     }
 }
