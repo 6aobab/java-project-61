@@ -8,7 +8,7 @@ public class Gcd {
     public static void findGreatest() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of "
-                + "given numbers");
+                + "given numbers.");
 
         int count = 3;
         do {
@@ -24,7 +24,7 @@ public class Gcd {
                 count--;
             } else {
                 System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
-                        + "'\nLet's try again, " + incomingName);
+                        + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
             if (count == 0) {

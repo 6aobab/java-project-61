@@ -23,7 +23,7 @@ public class Progression {
                 count--;
             } else {
                 System.out.println("'" + incomingProgression + "' is wrong answer ;(. Correct answer was '" + foundNum
-                        + "'\nLet's try again " + incomingName);
+                        + "'\nLet's try again " + incomingName + "!");
                 break;
             }
             if (count == 0) {

@@ -24,11 +24,11 @@ public class Prime {
                 System.out.println("Correct!");
                 count--;
             } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'\nLet's try again "
+                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again "
                         + incomingName + "!");
                 break;
             } else if (!isSimple(randomNumber) && incomingAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'\nLet's try again "
+                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again "
                         + incomingName + "!");
                 break;
             }
