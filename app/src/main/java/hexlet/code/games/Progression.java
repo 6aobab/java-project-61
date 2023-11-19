@@ -33,6 +33,7 @@ public class Progression {
     }
 
     public static int printAP(int start, int end, int step) {
+        System.out.print("Question: ");
         int foundNum = 0;
         int randomIndex = (int) (Math.random() * ((end - start) / step + 1));
         for (int i = start, currentIndex = 0; i <= end; i += step) {
