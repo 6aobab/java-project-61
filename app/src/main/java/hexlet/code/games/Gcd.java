@@ -12,9 +12,9 @@ public class Gcd {
 
         int count = 3;
         do {
-            int a = 100;
-            int firstNum = (int) (Math.random() * a);
-            int secondNum = (int) (Math.random() * a);
+            int found = 100;
+            int firstNum = (int) (Math.random() * found);
+            int secondNum = (int) (Math.random() * found);
             System.out.println("Question: " + firstNum + " " + secondNum);
             int result = gcd(firstNum, secondNum);
             System.out.print("Your answer: ");
