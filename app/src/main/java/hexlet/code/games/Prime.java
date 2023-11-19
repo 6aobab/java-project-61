@@ -8,8 +8,8 @@ public class Prime {
 
     public static void primeProcess() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime." +
-                " Otherwise answer 'no'.");
+        String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime."
+                + " Otherwise answer 'no'.");
         int count = 3;
         do {
             int a = 100;
@@ -39,9 +39,11 @@ public class Prime {
     }
 
     public static boolean isSimple(Integer number) {
-        if(number < 2) return false;
-        for(int i = 2; i < number / 2; i++) {
-            if(number % i == 0) {
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
                 return false;
             }
         }

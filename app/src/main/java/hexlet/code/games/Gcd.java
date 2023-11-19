@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Gcd {
     public static void findGreatest() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of given numbers");
+        String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of "
+                + "given numbers");
 
         int count = 3;
         do {
@@ -22,7 +23,8 @@ public class Gcd {
                 System.out.println("Correct!");
                 count--;
             } else {
-                System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result + "'\nLet's try again " + incomingName);
+                System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
+                        + "'\nLet's try again " + incomingName);
                 break;
             }
             if (count == 0) {

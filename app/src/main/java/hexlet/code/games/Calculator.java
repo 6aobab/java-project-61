@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner,3, "What is the result of the expression?");
+        String incomingName = Engine.scanName(scanner, 3, "What is the result of the expression?");
         int count = 3;
         do {
             int factor = 100;
@@ -29,7 +29,8 @@ public class Calculator {
                 System.out.println("Correct!");
                 count--;
             } else {
-                System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result + "'\nLet's try again " + incomingName);
+                System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
+                        + "'\nLet's try again " + incomingName);
                 break;
             }
             if (count == 0) {
@@ -40,7 +41,7 @@ public class Calculator {
 
     public static String generateOperator() {
         Random random = new Random();
-        String[] operators = {"+","-","*"};
+        String[] operators = {"+", "-", "*"};
         int randomOperator = random.nextInt(3);
         return operators[randomOperator];
     }
