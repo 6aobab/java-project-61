@@ -6,20 +6,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
+    public static int countToWin = 3;
+    public static final int factorForRandomNumber = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 3, "What is the result of the expression?");
-        int countToWin = 3;
-        int factorForRandomNumber = 100;
+
         do {
-            int b = (int) (Math.random() * factorForRandomNumber);
-            int c = (int) (Math.random() * factorForRandomNumber);
+            int firstRandomNumber = (int) (Math.random() * factorForRandomNumber);
+            int secondRandomNumber = (int) (Math.random() * factorForRandomNumber);
             String sign = generateOperator();
-            System.out.println("Question: " + b + " " + sign + " " + c);
+            System.out.println("Question: " + firstRandomNumber + " " + sign + " " + secondRandomNumber);
             int result = switch (sign) {
-                case "+" -> b + c;
-                case "*" -> b * c;
-                case "-" -> b - c;
+                case "+" -> firstRandomNumber + secondRandomNumber;
+                case "*" -> firstRandomNumber * secondRandomNumber;
+                case "-" -> firstRandomNumber - secondRandomNumber;
                 default -> 0;
             };
 
