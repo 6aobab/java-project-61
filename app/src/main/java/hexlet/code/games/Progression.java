@@ -14,7 +14,7 @@ public class Progression {
         do {
             int startNum = getRandomValue(1, 10);
             int endNum = getRandomValue(20, 99);
-            int step = getRandomValue(2, 5);
+            int step = 2;
             int foundNum = printAP(startNum, endNum, step);
             System.out.println("\nYour answer: ");
             int incomingProgression = scanner.nextInt();
