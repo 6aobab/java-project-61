@@ -11,6 +11,7 @@ public class Even {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, NUMGAME, "Answer 'yes' if the number is even, "
                 + "otherwise " + "answer 'no'.");
+        int count = Engine.getCount();
 
         do {
             int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
@@ -19,10 +20,10 @@ public class Even {
             String incomingAnswer = scanner.next();
             if (incomingAnswer.equals("yes") && (randomNumber % 2 == 0)) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else if (incomingAnswer.equals("no") && (randomNumber % 2 != 0)) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else if (incomingAnswer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, "
                         + incomingName + "!");
@@ -34,9 +35,9 @@ public class Even {
             } else {
                 break;
             }
-            if (Engine.COUNT == 0) {
+            if (count == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT > 0);
+        } while (count > 0);
     }
 }

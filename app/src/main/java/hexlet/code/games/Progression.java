@@ -19,6 +19,7 @@ public class Progression {
 
         String incomingName = Engine.scanName(scanner, NUMGAME, "What number is missing in the "
                 + "progression?");
+        int count = Engine.getCount();
         do {
             int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
             int endNumOfProgression = getRandomValue(minEndNumOfProgression, maxEndNumOfProgression);
@@ -28,16 +29,16 @@ public class Progression {
             int incomingProgression = scanner.nextInt();
             if (incomingProgression == foundNum) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else {
                 System.out.println("'" + incomingProgression + "' is wrong answer ;(. Correct answer was '" + foundNum
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (Engine.COUNT == 0) {
+            if (count == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT > 0);
+        } while (count > 0);
     }
 
     public static int printAP(int start, int end, int step) {

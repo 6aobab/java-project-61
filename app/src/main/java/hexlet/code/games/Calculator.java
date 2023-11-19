@@ -6,13 +6,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
-    private static final int NUMGAME = 3;
+    private static final int numGame = 3;
     private static final int NUM_OF_OPERATIONS = 3;
     private static int OPERATOR;
     private static final int FACTOR_FOR_NUMBER = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner,  NUMGAME, "What is the result of the expression?");
+        String incomingName = Engine.scanName(scanner,  numGame, "What is the result of the expression?");
+        int count = Engine.getCount();
 
         do {
             int firstRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
@@ -30,16 +31,16 @@ public class Calculator {
             int incomingNumber = scanner.nextInt();
             if (incomingNumber == result) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else {
                 System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (Engine.COUNT == 0) {
+            if (count == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT > 0);
+        } while (count > 0);
     }
 
     public static String generateOperator() {

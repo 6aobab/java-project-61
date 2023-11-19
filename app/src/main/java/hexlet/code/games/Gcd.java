@@ -11,6 +11,7 @@ public class Gcd {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, NUMGAME, "Find the greatest common divisor of "
                 + "given numbers.");
+        int count = Engine.getCount();
 
         do {
             int firstNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
@@ -27,16 +28,16 @@ public class Gcd {
             int incomingGCD = scanner.nextInt();
             if (incomingGCD == result) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else {
                 System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (Engine.COUNT == 0) {
+            if (count == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT > 0);
+        } while (count > 0);
     }
 
     public static int gcd(int a, int b) {

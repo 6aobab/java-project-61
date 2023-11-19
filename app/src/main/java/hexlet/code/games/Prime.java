@@ -13,6 +13,7 @@ public class Prime {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, NUMGAME, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
+        int count = Engine.getCount();
         do {
 
             int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
@@ -21,10 +22,10 @@ public class Prime {
             String incomingAnswer = scanner.next();
             if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else if (!isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("Correct!");
-                Engine.COUNT--;
+                count--;
             } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
                         + incomingName + "!");
@@ -34,10 +35,10 @@ public class Prime {
                         + incomingName + "!");
                 break;
             }
-            if (Engine.COUNT == 0) {
+            if (count == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (Engine.COUNT > 0);
+        } while (count > 0);
     }
 
     public static boolean isSimple(Integer number) {
