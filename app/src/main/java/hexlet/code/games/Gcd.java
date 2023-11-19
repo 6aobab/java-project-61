@@ -9,14 +9,15 @@ public class Gcd {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of "
                 + "given numbers.");
+        int factorForRandomNumber = 100;
 
         int countToWin = 3;
         do {
-            int firstNum = (int) (Math.random() * 100);
+            int firstNum = (int) (Math.random() * factorForRandomNumber);
             if (firstNum == 0) {
                 firstNum = firstNum + 1;
             }
-            int secondNum = (int) (Math.random() * 100);
+            int secondNum = (int) (Math.random() * factorForRandomNumber);
             if (secondNum == 0) {
                 secondNum = secondNum + 1;
             }

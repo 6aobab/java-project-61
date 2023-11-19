@@ -10,13 +10,17 @@ public class Progression {
         Scanner scanner = new Scanner(System.in);
         int minStartNumOfProgression = 1;
         int maxStartNimOfProgression = 10;
+        int minEndNumOfProgression = 20;
+        int maxEndNumOfProgression = 90;
+        int minStepOfProgression = 2;
+        int maxStepOfProgression = 4;
         String incomingName = Engine.scanName(scanner, 5, "What number is missing in the "
                 + "progression?");
         int countToWin = 3;
         do {
             int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
-            int endNumOfProgression = getRandomValue(20, 90);
-            int stepOfProgression = getRandomValue(2, 4);
+            int endNumOfProgression = getRandomValue(minEndNumOfProgression, maxEndNumOfProgression);
+            int stepOfProgression = getRandomValue(minStepOfProgression, maxStepOfProgression);
             int foundNum = printAP(startNumOfProgression, endNumOfProgression, stepOfProgression);
             System.out.print("\nYour answer: ");
             int incomingProgression = scanner.nextInt();
