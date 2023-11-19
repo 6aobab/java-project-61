@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class Prime {
 
     private static final int FACTOR_FOR_NUMBER = 100;
+    private static final int NUMGAME = 6;
 
     public static void primeProcess() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime."
+        String incomingName = Engine.scanName(scanner, NUMGAME, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
         do {
 

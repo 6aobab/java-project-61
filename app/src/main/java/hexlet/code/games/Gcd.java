@@ -6,9 +6,10 @@ import java.util.Scanner;
 
 public class Gcd {
     private static final int FACTOR_FOR_NUMBER = 100;
+    private static final int NUMGAME = 4;
     public static void findGreatest() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of "
+        String incomingName = Engine.scanName(scanner, NUMGAME, "Find the greatest common divisor of "
                 + "given numbers.");
 
         do {

@@ -12,11 +12,12 @@ public class Progression {
     private static final int maxEndNumOfProgression = 90;
     private static final int minStepOfProgression = 2;
     private static final int maxStepOfProgression = 4;
+    private static final int NUMGAME = 5;
 
     public static void doProgression() {
         Scanner scanner = new Scanner(System.in);
-        
-        String incomingName = Engine.scanName(scanner, 5, "What number is missing in the "
+
+        String incomingName = Engine.scanName(scanner, NUMGAME, "What number is missing in the "
                 + "progression?");
         do {
             int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
