@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculator {
-    public static int countToWin = 3;
-    public static final int factorForRandomNumber = 100;
+    private static int countToWin = 3;
+    private static final int factorForRandomNumber = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 3, "What is the result of the expression?");
