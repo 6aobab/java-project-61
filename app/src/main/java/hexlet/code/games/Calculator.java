@@ -7,10 +7,12 @@ import java.util.Scanner;
 
 public class Calculator {
     private static int countToWin = 3;
+    private static final int gameNum = 3;
+    private static int randomOperator;
     private static final int factorForRandomNumber = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 3, "What is the result of the expression?");
+        String incomingName = Engine.scanName(scanner,  gameNum, "What is the result of the expression?");
 
         do {
             int firstRandomNumber = (int) (Math.random() * factorForRandomNumber);
@@ -43,7 +45,7 @@ public class Calculator {
     public static String generateOperator() {
         Random random = new Random();
         String[] operators = {"+", "-", "*"};
-        int randomOperator = random.nextInt(3);
+        randomOperator = random.nextInt(3);
         return operators[randomOperator];
     }
 }
