@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class Progression {
     public static void doProgression() {
         Scanner scanner = new Scanner(System.in);
+        int minStartNumOfProgression = 1;
+        int maxStartNimOfProgression = 10;
         String incomingName = Engine.scanName(scanner, 5, "What number is missing in the "
                 + "progression?");
         int countToWin = 3;
         do {
-            int minStartNumOfProgression = 1;
-            int maxStartNimOfProgression = 10;
             int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
             int endNumOfProgression = getRandomValue(20, 90);
             int stepOfProgression = getRandomValue(2, 4);

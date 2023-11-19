@@ -12,12 +12,11 @@ public class Gcd {
 
         int countToWin = 3;
         do {
-            int foundToNum = 100;
-            int firstNum = (int) (Math.random() * foundToNum);
+            int firstNum = (int) (Math.random() * 100);
             if (firstNum == 0) {
                 firstNum = firstNum + 1;
             }
-            int secondNum = (int) (Math.random() * foundToNum);
+            int secondNum = (int) (Math.random() * 100);
             if (secondNum == 0) {
                 secondNum = secondNum + 1;
             }

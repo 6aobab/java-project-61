@@ -25,11 +25,11 @@ public class Menu {
             Even.checkEven();
         } else if (incomingText.equals("3")) {
             Calculator.calculate();
-        }else if (incomingText.equals("4")) {
+        } else if (incomingText.equals("4")) {
             Gcd.findGreatest();
-        }else if (incomingText.equals("5")) {
+        } else if (incomingText.equals("5")) {
             Progression.doProgression();
-        }else if (incomingText.equals("6")) {
+        } else if (incomingText.equals("6")) {
             Prime.primeProcess();
         }
     }
