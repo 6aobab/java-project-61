@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Even {
     public static void checkEven() {
         Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, 2, "Answer 'yes' if number even otherwise "
+        String incomingName = Engine.scanName(scanner, 2, "Answer 'yes' if number is even, otherwise "
                 + "answer 'no'.");
         int count = 3;
         do {
