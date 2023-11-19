@@ -34,6 +34,12 @@ public class Gcd {
     }
 
     public static int gcd(int a, int b) {
+        if (a == 0) {
+            a += 1;
+        }
+        if (b == 0) {
+            b += 1;
+        }
         a = Math.abs(a);
         b = Math.abs(b);
         if (b > a) {
