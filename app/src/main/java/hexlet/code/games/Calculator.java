@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Calculator {
     private static final int numGame = 3;
     private static final int NUM_OF_OPERATIONS = 3;
-    private static int OPERATOR;
+    private static int operator;
     private static final int FACTOR_FOR_NUMBER = 100;
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
@@ -46,7 +46,7 @@ public class Calculator {
     public static String generateOperator() {
         Random random = new Random();
         String[] operators = {"+", "-", "*"};
-        OPERATOR = random.nextInt(NUM_OF_OPERATIONS);
-        return operators[OPERATOR];
+        operator = random.nextInt(NUM_OF_OPERATIONS);
+        return operators[operator];
     }
 }

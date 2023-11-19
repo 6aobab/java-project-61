@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 
 public class Progression {
-    private static final int minStartNumOfProgression = 1;
-    private static final int maxStartNimOfProgression = 10;
-    private static final int minEndNumOfProgression = 20;
-    private static final int maxEndNumOfProgression = 90;
-    private static final int minStepOfProgression = 2;
-    private static final int maxStepOfProgression = 4;
+    private static final int MINSTART = 1;
+    private static final int MAXSTART = 10;
+    private static final int MINEND = 20;
+    private static final int MAXEND = 90;
+    private static final int MINSTEP = 2;
+    private static final int MAXSTEP = 4;
     private static final int NUMGAME = 5;
 
     public static void doProgression() {
@@ -21,9 +21,9 @@ public class Progression {
                 + "progression?");
         int count = Engine.getCount();
         do {
-            int startNumOfProgression = getRandomValue(minStartNumOfProgression, maxStartNimOfProgression);
-            int endNumOfProgression = getRandomValue(minEndNumOfProgression, maxEndNumOfProgression);
-            int stepOfProgression = getRandomValue(minStepOfProgression, maxStepOfProgression);
+            int startNumOfProgression = getRandomValue(MINSTART, MAXSTART);
+            int endNumOfProgression = getRandomValue(MINEND, MAXEND);
+            int stepOfProgression = getRandomValue(MINSTEP, MAXSTEP);
             int foundNum = printAP(startNumOfProgression, endNumOfProgression, stepOfProgression);
             System.out.print("\nYour answer: ");
             int incomingProgression = scanner.nextInt();
