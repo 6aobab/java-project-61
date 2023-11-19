@@ -10,8 +10,8 @@ public class Prime {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
-        int fountForRandomNumber = 100;
-        int countToWin = 3;
+        var fountForRandomNumber = 100;
+        var countToWin = 3;
         do {
 
             int randomNumber = (int) (Math.random() * fountForRandomNumber);

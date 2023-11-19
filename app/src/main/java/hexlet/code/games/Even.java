@@ -9,9 +9,9 @@ public class Even {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 2, "Answer 'yes' if the number is even, "
                 + "otherwise " + "answer 'no'.");
+        int factorForRandomNumber = 100;
         int countToWin = 3; // count to win
         do {
-            int factorForRandomNumber = 100;
             int randomNumber = (int) (Math.random() * factorForRandomNumber);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
