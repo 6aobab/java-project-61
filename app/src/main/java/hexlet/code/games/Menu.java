@@ -19,14 +19,18 @@ public class Menu {
     public static void chooseGame() {
         Scanner scanner = new Scanner(System.in);
         String incomingText = scanner.next();
-        switch (incomingText) {
-            case "1" -> Greetings.great();
-            case "2" -> Even.checkEven();
-            case "3" -> Calculator.calculate();
-            case "4" -> Gcd.findGreatest();
-            case "5" -> Progression.doProgression();
-            case "6" -> Prime.primeProcess();
-            default -> System.out.println("Please enter game number next time");
+        if (incomingText.equals("1")) {
+            Greetings.great();
+        } else if (incomingText.equals("2")) {
+            Even.checkEven();
+        } else if (incomingText.equals("3")) {
+            Calculator.calculate();
+        }else if (incomingText.equals("4")) {
+            Gcd.findGreatest();
+        }else if (incomingText.equals("5")) {
+            Progression.doProgression();
+        }else if (incomingText.equals("6")) {
+            Prime.primeProcess();
         }
     }
 }

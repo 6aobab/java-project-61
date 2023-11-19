@@ -9,7 +9,7 @@ public class Even {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 2, "Answer 'yes' if the number is even, "
                 + "otherwise " + "answer 'no'.");
-        int count = 3;
+        int countToWin = 3;
         do {
             int factor = 100;
             int randomNumber = (int) (Math.random() * factor);
@@ -18,10 +18,10 @@ public class Even {
             String incomingAnswer = scanner.next();
             if (incomingAnswer.equals("yes") && (randomNumber % 2 == 0)) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else if (incomingAnswer.equals("no") && (randomNumber % 2 != 0)) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else if (incomingAnswer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, "
                         + incomingName + "!");
@@ -33,9 +33,9 @@ public class Even {
             } else {
                 break;
             }
-            if (count == 0) {
+            if (countToWin == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (count > 0);
+        } while (countToWin > 0);
     }
 }

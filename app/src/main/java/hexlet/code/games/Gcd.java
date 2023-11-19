@@ -10,7 +10,7 @@ public class Gcd {
         String incomingName = Engine.scanName(scanner, 4, "Find the greatest common divisor of "
                 + "given numbers.");
 
-        int count = 3;
+        int countToWin = 3;
         do {
             int found = 100;
             int firstNum = (int) (Math.random() * found);
@@ -27,16 +27,16 @@ public class Gcd {
             int incomingGCD = scanner.nextInt();
             if (incomingGCD == result) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else {
                 System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (count == 0) {
+            if (countToWin == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (count > 0);
+        } while (countToWin > 0);
     }
 
     public static int gcd(int a, int b) {
