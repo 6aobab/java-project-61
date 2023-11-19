@@ -9,11 +9,11 @@ public class Calculator {
     public static void calculate() {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 3, "What is the result of the expression?");
-        int count = 3;
+        int countToWin = 3;
+        int factorForRandomNumber = 100;
         do {
-            int factor = 100;
-            int b = (int) (Math.random() * factor);
-            int c = (int) (Math.random() * factor);
+            int b = (int) (Math.random() * factorForRandomNumber);
+            int c = (int) (Math.random() * factorForRandomNumber);
             String sign = generateOperator();
             System.out.println("Question: " + b + " " + sign + " " + c);
             int result = switch (sign) {
@@ -27,16 +27,16 @@ public class Calculator {
             int incomingNumber = scanner.nextInt();
             if (incomingNumber == result) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else {
                 System.out.println("'" + incomingNumber + "' is wrong answer ;(. Correct answer was '" + result
                         + "'\nLet's try again, " + incomingName + "!");
                 break;
             }
-            if (count == 0) {
+            if (countToWin == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (count > 0);
+        } while (countToWin > 0);
     }
 
     public static String generateOperator() {

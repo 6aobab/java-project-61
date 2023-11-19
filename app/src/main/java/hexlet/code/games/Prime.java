@@ -10,19 +10,20 @@ public class Prime {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner, 6, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
-        int count = 3;
+        int fountForRandomNumber = 100;
+        int countToWin = 3;
         do {
-            int a = 100;
-            int randomNumber = (int) (Math.random() * a);
+
+            int randomNumber = (int) (Math.random() * fountForRandomNumber);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             String incomingAnswer = scanner.next();
             if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else if (!isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("Correct!");
-                count--;
+                countToWin--;
             } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
                         + incomingName + "!");
@@ -32,10 +33,10 @@ public class Prime {
                         + incomingName + "!");
                 break;
             }
-            if (count == 0) {
+            if (countToWin == 0) {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
-        } while (count > 0);
+        } while (countToWin > 0);
     }
 
     public static boolean isSimple(Integer number) {
