@@ -13,10 +13,8 @@ public class Progression {
     private static final int MINSTEP = 2;
     private static final int MAXSTEP = 4;
     private static final int NUMGAME = 5;
-
     public static void doProgression() {
         Scanner scanner = new Scanner(System.in);
-
         String incomingName = Engine.scanName(scanner, NUMGAME, "What number is missing in the "
                 + "progression?");
         int count = Engine.getCount();

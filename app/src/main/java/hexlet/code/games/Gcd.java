@@ -12,16 +12,9 @@ public class Gcd {
         String incomingName = Engine.scanName(scanner, NUMGAME, "Find the greatest common divisor of "
                 + "given numbers.");
         int count = Engine.getCount();
-
         do {
-            int firstNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
-            if (firstNum == 0) {
-                firstNum = firstNum + 1;
-            }
-            int secondNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
-            if (secondNum == 0) {
-                secondNum = secondNum + 1;
-            }
+            int firstNum = createFirst();
+            int secondNum = createSecond();
             System.out.println("Question: " + firstNum + " " + secondNum);
             int result = gcd(firstNum, secondNum);
             System.out.print("Your answer: ");
@@ -55,5 +48,20 @@ public class Gcd {
             r = a % b;
         }
         return b;
+    }
+
+    public static int createFirst() {
+        int firstNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
+        if (firstNum == 0) {
+            firstNum+=1;
+        }
+        return firstNum;
+    }
+    public static int createSecond() {
+        int secondNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
+        if (secondNum == 0) {
+            secondNum+=1;
+        }
+        return secondNum;
     }
 }
