@@ -14,7 +14,6 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         String incomingName = Engine.scanName(scanner,  NUMGAME, "What is the result of the expression?");
         int count = Engine.getCount();
-
         do {
             int firstRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
             int secondRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
@@ -26,7 +25,6 @@ public class Calculator {
                 case "-" -> firstRandomNumber - secondRandomNumber;
                 default -> 0;
             };
-
             System.out.print("Your answer: ");
             int incomingNumber = scanner.nextInt();
             if (incomingNumber == result) {

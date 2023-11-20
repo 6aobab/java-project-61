@@ -12,7 +12,6 @@ public class Even {
         String incomingName = Engine.scanName(scanner, NUMGAME, "Answer 'yes' if the number is even, "
                 + "otherwise " + "answer 'no'.");
         int count = Engine.getCount();
-
         do {
             int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
             System.out.println("Question: " + randomNumber);
