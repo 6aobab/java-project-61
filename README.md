@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/6aobab/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/6aobab/java-project-61/actions)
+https://codeclimate.com/github/6aobab/java-project-61
 1) Greet - https://asciinema.org/a/QJKyr2ANCKR14n58TU7iEm3l9
 2) Even - https://asciinema.org/a/O4Kr8HUHl4rx3wO5ASFIeZzJ3
 3) Calc - https://asciinema.org/a/RzWmxyBEqnbbnbUv2QSRZv4vS
