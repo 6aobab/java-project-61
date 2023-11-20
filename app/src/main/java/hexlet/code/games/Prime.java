@@ -20,8 +20,10 @@ public class Prime {
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             String incomingAnswer = scanner.next();
-            if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {System.out.println("Correct!");count--;
-            } else if (!isSimple(randomNumber) && incomingAnswer.equals("no")) {System.out.println("Correct!");count--;
+            if (isSimple(randomNumber) && incomingAnswer.equals("yes"))
+            {System.out.println("Correct!"); count--;
+            } else if (!isSimple(randomNumber) && incomingAnswer.equals("no"))
+            {System.out.println("Correct!"); count--;
             } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
                         + incomingName + "!");
