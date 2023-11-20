@@ -13,8 +13,8 @@ public class Gcd {
                 + "given numbers.");
         int count = Engine.getCount();
         do {
-            int firstNum = createFirst();
-            int secondNum = createSecond();
+            int firstNum = genNumber();
+            int secondNum = genNumber();
             System.out.println("Question: " + firstNum + " " + secondNum);
             int result = gcd(firstNum, secondNum);
             System.out.print("Your answer: ");
@@ -50,18 +50,11 @@ public class Gcd {
         return b;
     }
 
-    public static int createFirst() {
-        int firstNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
-        if (firstNum == 0) {
-            firstNum+=1;
+    public static int genNumber() {
+        int num = (int) (Math.random() * FACTOR_FOR_NUMBER);
+        if (num == 0) {
+            num += 1;
         }
-        return firstNum;
-    }
-    public static int createSecond() {
-        int secondNum = (int) (Math.random() * FACTOR_FOR_NUMBER);
-        if (secondNum == 0) {
-            secondNum+=1;
-        }
-        return secondNum;
+        return num;
     }
 }
