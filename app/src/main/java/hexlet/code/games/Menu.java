@@ -27,7 +27,7 @@ public class Menu {
             case "3" -> Calculator.calculate();
             case "4" -> Gcd.findGreatest();
             case "5" -> Progression.doProgression();
-            case "6" -> Prime.primeProcess();
+            case "6" -> Prime.findPrime();
             default -> System.out.println("Write number from 1 to 6!");
         }
     }
