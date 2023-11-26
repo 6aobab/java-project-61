@@ -1,5 +1,4 @@
 package hexlet.code;
-import hexlet.code.games.Calculator;
 
 import java.util.Scanner;
 
@@ -23,9 +22,9 @@ public class Engine {
         return COUNT;
     }
 
-    public static void even(Scanner scanner, int FACTOR_FOR_NUMBER, int count, String incomingName) {
+    public static void even(Scanner scanner, int factor, int count, String incomingName) {
         do {
-            int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            int randomNumber = (int) (Math.random() * factor);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             String incomingAnswer = scanner.next();
@@ -52,10 +51,10 @@ public class Engine {
         } while (count > 0);
     }
 
-    public static void calculator(Scanner scanner, String sign, int FACTOR_FOR_NUMBER, int count, String incomingName) {
+    public static void calculator(Scanner scanner, String sign, int factor, int count, String incomingName) {
         do {
-            int firstRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
-            int secondRandomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            int firstRandomNumber = (int) (Math.random() * factor);
+            int secondRandomNumber = (int) (Math.random() * factor);
             System.out.println("Question: " + firstRandomNumber + " " + sign + " " + secondRandomNumber);
             int result = switch (sign) {
                 case "+" -> firstRandomNumber + secondRandomNumber;
@@ -79,7 +78,7 @@ public class Engine {
         } while (count > 0);
     }
 
-    public static void gcdFind(int firstNum, int secondNum, int result, Scanner scanner, int count, String incomingName) {
+    public static void gcd(int firstNum, int secondNum, int result, Scanner scanner, int count, String incomingName) {
         do {
             System.out.println("Question: " + firstNum + " " + secondNum);
             System.out.print("Your answer: ");
@@ -98,9 +97,9 @@ public class Engine {
         } while (count > 0);
     }
 
-    public static void prime(int FACTOR_FOR_NUMBER, Scanner scanner, int count, String incomingName) {
+    public static void prime(int factor, Scanner scanner, int count, String incomingName) {
         do {
-            int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            int randomNumber = (int) (Math.random() * factor);
             System.out.println("Question: " + randomNumber + "\nYour answer: ");
             String incomingAnswer = scanner.next();
             if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {

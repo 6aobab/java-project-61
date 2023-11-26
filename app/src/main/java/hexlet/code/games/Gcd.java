@@ -14,11 +14,11 @@ public class Gcd {
         int count = Engine.getCount();
         int firstNum = genNumber();
         int secondNum = genNumber();
-        int result = gcd(firstNum, secondNum);
-        Engine.gcdFind(firstNum, secondNum, result, scanner, count, incomingName);
+        int result = gcdFind(firstNum, secondNum);
+        Engine.gcd(firstNum, secondNum, result, scanner, count, incomingName);
     }
 
-    public static int gcd(int a, int b) {
+    public static int gcdFind(int a, int b) {
         a = Math.abs(a);
         b = Math.abs(b);
         if (b > a) {
