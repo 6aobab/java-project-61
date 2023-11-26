@@ -1,5 +1,5 @@
 .gradle
-.idea
+/java-project-61/tree/main/app/.idea
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
