@@ -12,25 +12,10 @@ public class Gcd {
         String incomingName = Engine.scanName(scanner, NUMGAME, "Find the greatest common divisor of "
                 + "given numbers.");
         int count = Engine.getCount();
-        do {
-            int firstNum = genNumber();
-            int secondNum = genNumber();
-            System.out.println("Question: " + firstNum + " " + secondNum);
-            int result = gcd(firstNum, secondNum);
-            System.out.print("Your answer: ");
-            int incomingGCD = scanner.nextInt();
-            if (incomingGCD == result) {
-                System.out.println("Correct!");
-                count--;
-            } else {
-                System.out.println("'" + incomingGCD + "' is wrong answer ;(. Correct answer was '" + result
-                        + "'\nLet's try again, " + incomingName + "!");
-                break;
-            }
-            if (count == 0) {
-                System.out.println("Congratulations, " + incomingName + "!");
-            }
-        } while (count > 0);
+        int firstNum = genNumber();
+        int secondNum = genNumber();
+        int result = gcd(firstNum, secondNum);
+        Engine.gcdFind(firstNum, secondNum, result, scanner, count, incomingName);
     }
 
     public static int gcd(int a, int b) {

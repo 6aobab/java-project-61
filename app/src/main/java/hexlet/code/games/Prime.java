@@ -14,33 +14,7 @@ public class Prime {
         String incomingName = Engine.scanName(scanner, NUMGAME, "Answer 'yes' if given number is prime."
                 + " Otherwise answer 'no'.");
         int count = Engine.getCount();
-        checkSimple(scanner, count, incomingName);
-    }
-
-    public static void checkSimple(Scanner scanner, int count, String incomingName) {
-        do {
-            int randomNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
-            System.out.println("Question: " + randomNumber + "\nYour answer: ");
-            String incomingAnswer = scanner.next();
-            if (isSimple(randomNumber) && incomingAnswer.equals("yes")) {
-                System.out.println("Correct!");
-                count--;
-            } else if (!isSimple(randomNumber) && incomingAnswer.equals("no")) {
-                System.out.println("Correct!");
-                count--;
-            } else if (isSimple(randomNumber) && incomingAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, "
-                        + incomingName + "!");
-                break;
-            } else if (!isSimple(randomNumber) && incomingAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, "
-                        + incomingName + "!");
-                break;
-            }
-            if (count == 0) {
-                System.out.println("Congratulations, " + incomingName + "!");
-            }
-        } while (count > 0);
+        Engine.prime(FACTOR_FOR_NUMBER, scanner, count, incomingName);
     }
 
     public static boolean isSimple(Integer number) {
