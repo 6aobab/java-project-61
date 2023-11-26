@@ -1,11 +1,25 @@
 package hexlet.code;
 
-import java.util.Scanner;
+import hexlet.code.games.*;
 
-import static hexlet.code.games.Prime.isSimple;
+import java.util.Scanner;
 
 public class Engine {
     private static final int COUNT = 3;
+
+    public static void chooseGame() {
+        Scanner scanner = new Scanner(System.in);
+        String incomingText = scanner.next();
+        switch (incomingText) {
+            case "1" -> Greetings.great();
+            case "2" -> Even.checkEven();
+            case "3" -> Calculator.calculate();
+            case "4" -> Gcd.findGreatest();
+            case "5" -> Progression.doProgression();
+            case "6" -> Prime.primeProcess();
+            default -> System.out.println("Write number from 1 to 6!");
+        }
+    }
 
     public static String scanName(Scanner scanner, int gameNum, String question) {
         System.out.println("Your choice: " + gameNum);
@@ -121,6 +135,18 @@ public class Engine {
                 System.out.println("Congratulations, " + incomingName + "!");
             }
         } while (count > 0);
+    }
+
+    public static boolean isSimple(Integer number) {
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void progression(Scanner scanner, int foundNum, int count, String incomingName) {
