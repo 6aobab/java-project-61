@@ -1,25 +1,9 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
 import java.util.Scanner;
 
 public class Engine {
     private static final int COUNT = 3;
-
-    public static void chooseGame() {
-        Scanner scanner = new Scanner(System.in);
-        String incomingText = scanner.next();
-        switch (incomingText) {
-            case "1" -> Greetings.great();
-            case "2" -> Even.checkEven();
-            case "3" -> Calculator.calculate();
-            case "4" -> Gcd.findGreatest();
-            case "5" -> Progression.doProgression();
-            case "6" -> Prime.primeProcess();
-            default -> System.out.println("Write number from 1 to 6!");
-        }
-    }
 
     public static String scanName(Scanner scanner, int gameNum, String question) {
         System.out.println("Your choice: " + gameNum);
