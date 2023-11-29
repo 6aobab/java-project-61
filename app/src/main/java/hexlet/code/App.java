@@ -1,12 +1,16 @@
 package hexlet.code;
 
 import hexlet.code.Main.Greetings;
-import hexlet.code.games.*;
-
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) { openMenu();
+    public static void main(String[] args) {
+        openMenu();
     }
     public static void openMenu() {
         System.out.println("""

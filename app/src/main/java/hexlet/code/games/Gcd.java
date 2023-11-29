@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-
 import hexlet.code.Main.Engine;
 
 public class Gcd {

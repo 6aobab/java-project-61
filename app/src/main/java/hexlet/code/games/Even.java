@@ -7,7 +7,7 @@ public class Even {
     public static final int OPTIONS = 2;
     public static final int FACTOR_FOR_NUMBER = 100;
     public static void checkEven() {
-        String[][] conditionAnswer = new String[Engine.COUNT][OPTIONS];
+        var conditionAnswer = new String[Engine.COUNT][OPTIONS];
         for (int i = 0; i < Engine.COUNT; i++) {
             int number = (int) (Math.random() * FACTOR_FOR_NUMBER);
             String correctAnswer = isEven(number) ? "yes" : "no";
