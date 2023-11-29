@@ -34,7 +34,7 @@ public class App {
             case "4" -> Gcd.findGreatest();
             case "5" -> Progression.printAp();
             case "6" -> Prime.findPrime();
-            default -> System.out.println("Write number from 1 to 6!");
+            default -> System.out.println("Write numbers from 1 to 6!");
         }
     }
 }
