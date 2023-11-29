@@ -1,23 +1,24 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
 
-import java.util.Scanner;
+import hexlet.code.Main.Engine;
 
 public class Gcd {
-    private static final int FACTOR_FOR_NUMBER = 100;
-    private static final int NUMGAME = 4;
+    public static final String RULES = "Find the greatest common divisor of given numbers.";
+    public static final int OPTIONS = 2;
+    public static final int FACTOR_FOR_NUMBER = 100;
     public static void findGreatest() {
-        Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, NUMGAME, "Find the greatest common divisor of "
-                + "given numbers.");
-        int count = Engine.getCount();
-        int firstNum = genNumber();
-        int secondNum = genNumber();
-        int result = gcdFind(firstNum, secondNum);
-        Engine.gcd(firstNum, secondNum, result, scanner, count, incomingName);
+        String[][] conditionAnswer = new String[Engine.COUNT][OPTIONS];
+        for (int i = 0; i < Engine.COUNT; i++) {
+            int firstNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            int secondNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
+            String question = firstNumber + " " + secondNumber;
+            String correctAnswer = String.valueOf(gcdFind(firstNumber, secondNumber));
+            conditionAnswer[i][0] = question;
+            conditionAnswer[i][1] = correctAnswer;
+        }
+        Engine.countThreeRounds(conditionAnswer, RULES);
     }
-
     public static int gcdFind(int a, int b) {
         a = Math.abs(a);
         b = Math.abs(b);
@@ -33,13 +34,5 @@ public class Gcd {
             r = a % b;
         }
         return b;
-    }
-
-    public static int genNumber() {
-        int num = (int) (Math.random() * FACTOR_FOR_NUMBER);
-        if (num == 0) {
-            num += 1;
-        }
-        return num;
     }
 }

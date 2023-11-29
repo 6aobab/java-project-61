@@ -1,48 +1,39 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Main.Engine;
 
-import java.util.Scanner;
+import java.util.Random;
 
 
 public class Progression {
-    private static final int MINSTART = 1;
-    private static final int MAXSTART = 10;
-    private static final int MINEND = 20;
-    private static final int MAXEND = 90;
-    private static final int MINSTEP = 2;
-    private static final int MAXSTEP = 4;
-    private static final int NUMGAME = 5;
-    public static void doProgression() {
-        Scanner scanner = new Scanner(System.in);
-        String incomingName = Engine.scanName(scanner, NUMGAME, "What number is missing in the "
-                + "progression?");
-        int count = Engine.getCount();
-        int startNumOfProgression = getRandomValue(MINSTART, MAXSTART);
-        int endNumOfProgression = getRandomValue(MINEND, MAXEND);
-        int stepOfProgression = getRandomValue(MINSTEP, MAXSTEP);
-        int foundNum = printAP(startNumOfProgression, endNumOfProgression, stepOfProgression);
-        Engine.progression(scanner, foundNum, count, incomingName);
-    }
+    public static final String RULES = "What number is missing in the progression?";
+    public static final int OPTIONS = 2;
+    public static final int MINLENGTH = 5;
+    public static final int MAXLENGTH = 10;
+    public static final int MAXSTEP = 5;
+    public static final int MAXSTART = 20;
 
-    public static int printAP(int start, int end, int step) {
-        System.out.print("Question: ");
-        int foundNum = 0;
-        int randomIndex = (int) (Math.random() * ((end - start) / step + 1));
-        for (int i = start, currentIndex = 0; i <= end; i += step) {
-            if (currentIndex == randomIndex) {
-                System.out.print(".. ");
-                foundNum = i;
-            } else {
-                System.out.print(i + " ");
-            }
-            currentIndex++;
-
+    public static void printAp() {
+        String[][] conditionAnswer = new String[Engine.COUNT][OPTIONS];
+        Random random = new Random();
+        for (int i = 0; i < Engine.COUNT; i++) {
+            int startNumber = random.nextInt(MAXSTART) + 1;
+            int progressionLength = MINLENGTH + random.nextInt(MAXLENGTH - MINLENGTH + 1);
+            int step = random.nextInt(MAXSTEP) + 2;
+            int replacement = random.nextInt(progressionLength);
+            var progressionParts = doProgression(startNumber, step, progressionLength);
+            conditionAnswer[i][1] = progressionParts[replacement];
+            progressionParts[replacement] = "..";
+            conditionAnswer[i][0] = String.join(" ", progressionParts);
         }
-        return foundNum;
+        Engine.countThreeRounds(conditionAnswer, RULES);
     }
-
-    private static int getRandomValue(int minNumber, int maxNumber) {
-        return (int) (Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+    private static String[] doProgression(int startNumber, int step, int progressionLength) {
+        String[] progression = new String[progressionLength];
+        for (var i = 0; i < progressionLength; i++) {
+            progression[i] = String.valueOf(startNumber);
+            startNumber = startNumber + step;
+        }
+        return progression;
     }
 }
