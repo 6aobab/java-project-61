@@ -1,8 +1,9 @@
-package hexlet.code.Main;
+package hexlet.code.main;
 
 import java.util.Scanner;
 
 public class Greetings {
+
     public static void great() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your choice: 1");

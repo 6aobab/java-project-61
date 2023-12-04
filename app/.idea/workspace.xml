@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73634493-e28e-44e8-8591-1bc4719cde23" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <module name="app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hexlet.code.Main.*" />
+          <option name="PATTERN" value="hexlet.code.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

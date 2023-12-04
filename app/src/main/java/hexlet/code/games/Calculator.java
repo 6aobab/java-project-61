@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Main.Engine;
+import hexlet.code.main.Engine;
 
 import java.util.Random;
 
@@ -9,19 +9,21 @@ public class Calculator {
     public static final int OPTIONS = 2;
     public static final String[] OPERATORS = {"+", "-", "*"};
     public static final int FACTOR_FOR_NUMBER = 100;
+
     public static void calculateExpression() {
-        String[][] conditionAnswer = new String[Engine.COUNT][OPTIONS];
+        String[][] questionAnswer = new String[Engine.COUNT][OPTIONS];
         Random random = new Random();
         for (int i = 0; i < Engine.COUNT; i++) {
             int firstNumber =  (int) (Math.random() * FACTOR_FOR_NUMBER);
             int secondNumber = (int) (Math.random() * FACTOR_FOR_NUMBER);
             String operator = OPERATORS[random.nextInt(OPERATORS.length)];
             String question = firstNumber + " " + operator + " " + secondNumber;
-            conditionAnswer[i][0] = question;
-            conditionAnswer[i][1] = String.valueOf(calculate(firstNumber, secondNumber, operator));
+            questionAnswer[i][0] = question;
+            questionAnswer[i][1] = String.valueOf(calculate(firstNumber, secondNumber, operator));
         }
-        Engine.countThreeRounds(conditionAnswer, RULES);
+        Engine.countThreeRounds(questionAnswer, RULES);
     }
+
     private static int calculate(int a, int b, String operator) {
         return switch (operator) {
             case "+" -> a + b;

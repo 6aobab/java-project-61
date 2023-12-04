@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.Main.Greetings;
+import hexlet.code.main.Greetings;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
 import hexlet.code.games.Gcd;
@@ -9,9 +9,11 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
+
     public static void main(String[] args) {
         openMenu();
     }
+
     public static void openMenu() {
         System.out.println("""
                 Please enter the game number and press Enter\s
@@ -24,6 +26,7 @@ public class App {
                 0 - Exit""");
         chooseGame();
     }
+
     public static void chooseGame() {
         Scanner scanner = new Scanner(System.in);
         String incomingText = scanner.next();
