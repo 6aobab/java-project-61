@@ -7,3 +7,4 @@
 4) GCD - https://asciinema.org/a/cll86rnVW2FDxToUdS2zGIDDC
 5) Progression - https://asciinema.org/a/BANqWzgBTkxQRdmmssuYPZ4QR
 6) Prime - https://asciinema.org/a/neNyWR6gpif7ib50ZrDV59DtD
+[![asciicast](https://asciinema.org/a/QJKyr2ANCKR14n58TU7iEm3l9.svg)](https://asciinema.org/a/QJKyr2ANCKR14n58TU7iEm3l9)
