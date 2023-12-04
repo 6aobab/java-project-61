@@ -1,4 +1,4 @@
-Mind games is 5 games in console. Games ask question that needs correct answers. If 3 answers are correct, you win, otherwise you lose.
+Mind games is 5 games in console. Games ask question that needs correct answers. If 3 answers are correct, you win, otherwise you lose!
 1) Greeting. Greets you.
 2) Even. Define what number is even or odd.
 3) Calculator. Calculate expressions.
