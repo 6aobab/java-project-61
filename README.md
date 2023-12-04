@@ -5,7 +5,7 @@ Mind games is 5 games in console. Games ask question that needs correct answers.
 4) GCD. Find the Greatest Common Divisor.
 5) Progression. Search missing numbers in a mathprogression.
 6) Prime. Define what number is prime or not.
-7) 
+ 
    To run game, enter "make run-dist" in console.
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/6aobab/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/6aobab/java-project-61/actions)
